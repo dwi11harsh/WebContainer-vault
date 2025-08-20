@@ -212,7 +212,7 @@ struct_1 {
 ![[Screenshot 2025-08-20 at 10.35.40 PM.png]]
 > so, I will be trying to implement these within the two structs I talked about and the method distribution will go something like:
 
-<u>Directory methods:</u>
+[[Directory Methods & implementations| Directory Methods]]
 1. `mkdir`
 2. `ls`
 3. `rm`: for file and for dir
@@ -221,7 +221,7 @@ struct_1 {
 6. `head`
 7. `touch`
 
-<u>VirtualFS methods:</u>
+[[VirtualFS methods & Implementations |VirtualFS Methods]]
 1. `cd`
 2. `cp`
 3. `mv`
@@ -231,4 +231,9 @@ struct_1 {
 
 > I am still not sure of these ops (which one to implement, which one to not, where to put which one)
 > will plan and change as I go
+> Right now I am not trying to implement any flags and if it is really necessary then it can be passed as a function argument
+
+<span style="color:rgb(108, 106, 106)">my chair's caster wheel broke, let me cry for a while, will pickup again tomorrow, making a commit now</span>
+
+
 
