@@ -185,3 +185,50 @@ impl VirtualFS {
 ```
 
 > Second commit is made with this code in [this github repo](https://github.com/dwi11harsh/v1.webcontainer)
+
+_Day 3: aug 20, 2025_
+<span style="color:rgb(108, 106, 106)">implementing a virtual file system for the container today</span> 
+
+![[Screenshot 2025-08-20 at 10.23.57 PM.png]]
+_not explaining this_
+
+> **My thinking rn:** I am thinking that I should implement this with a two `struct` like something
+
+```txt
+struct_1 {
+	some ops
+	...
+		struct_2 {
+			some ops
+			...
+		}
+}
+```
+
+> The outside struct will be the `VirtualFS` and the inner one will be `Directory`. The reason for this is that some of the ops are performed from outside the directory (like copy, move, delete, etc) and some needs to be performed form inside the directory (like listing all the files and directories, creating a new directory, and some more).
+> I have some more things that I am thinking of rn but these will be apparent as I keep going with this idea 🤞. 
+
+> I googled something and here is the result:
+![[Screenshot 2025-08-20 at 10.35.40 PM.png]]
+> so, I will be trying to implement these within the two structs I talked about and the method distribution will go something like:
+
+<u>Directory methods:</u>
+1. `mkdir`
+2. `ls`
+3. `rm`: for file and for dir
+4. `grep`
+5. `cat`
+6. `head`
+7. `touch`
+
+<u>VirtualFS methods:</u>
+1. `cd`
+2. `cp`
+3. `mv`
+4. `pwd`
+5. `rmdir`
+6. `rename`
+
+> I am still not sure of these ops (which one to implement, which one to not, where to put which one)
+> will plan and change as I go
+
